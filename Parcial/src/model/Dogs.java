@@ -16,7 +16,11 @@ public class Dogs
 
 	public Dogs() 
 	{
-		
+		id1 = 0;
+		id2 = 0;
+		id3 = 0;
+		id4 = 0;
+		id5 = 0;
 	}
 	
 	public void loadText(PApplet app)

@@ -24,6 +24,9 @@ public class Main extends PApplet
 	public void setup() //void Start
 	{
 		dog = new Dogs();
+		
+		posXButton = 410;
+		posYButton = 435;
 	}
 	
 	@Override
@@ -48,7 +51,7 @@ public class Main extends PApplet
 		stroke(0);
 		strokeWeight(3);
 		fill(255);
-		rect(410, 435, 80, 30);
+		rect(posXButton, posYButton, 80, 30);
 		
 		textAlign(CENTER);
 		fill(0);
