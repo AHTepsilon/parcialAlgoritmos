@@ -25,7 +25,7 @@ public class Logic
 	{
 		dog.loadText(app);
 		dog.separateText();
-		dog.validateText(4);
+		dog.validateText(1);
 	}
 	
 	public void sortList()

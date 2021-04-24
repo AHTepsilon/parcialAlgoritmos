@@ -4,34 +4,34 @@ public class DogName extends Dogs
 {
 	String name;
 
-	public DogName(String name)
+	public DogName()
 	{
-		this.name = name;
+		
 	}
 	
-	public void assign()
+	public void assign(int id)
 	{
-		if(id1 == 1)
+		if(id == 1)
 		{
 			name = "Martina";
 		}
 		
-		if(id2 == 2)
+		if(id == 2)
 		{
 			name = "Kaiser";
 		}
 		
-		if(id3 == 3)
+		if(id == 3)
 		{
 			name = "Heisenberg";
 		}
 		
-		if(id4 == 4)
+		if(id == 4)
 		{
 			name = "Lola";
 		}
 		
-		if(id5 == 5)
+		if(id == 5)
 		{
 			name = "Nymeria";
 		}
