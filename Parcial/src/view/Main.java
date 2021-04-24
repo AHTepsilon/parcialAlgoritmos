@@ -1,4 +1,5 @@
 package view;
+import model.Dogs;
 import processing.core.PApplet;
 
 public class Main extends PApplet
@@ -17,10 +18,12 @@ public class Main extends PApplet
 	
 	int posXButton, posYButton;
 	
+	Dogs dog;
+	
 	@Override
 	public void setup() //void Start
 	{
-		
+		dog = new Dogs();
 	}
 	
 	@Override
@@ -30,6 +33,9 @@ public class Main extends PApplet
 		background(145, 242, 216);
 		rectMode(CENTER);
 		saveButton();
+
+		dog.loadText(this);
+		dog.separateText();
 	}
 	
 	public void mousePressed()

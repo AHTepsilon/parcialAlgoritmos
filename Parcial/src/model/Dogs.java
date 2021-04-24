@@ -16,14 +16,22 @@ public class Dogs
 		
 	}
 	
-	public void loadText()
+	public void loadText(PApplet app)
 	{
-		
+		text1 = app.loadStrings("./imports/dogs1");
+		text2 = app.loadStrings("./imports/dogs2");
 	}
 	
 	public void separateText()
 	{
-		
+		for (int i = 0; i < text1.length; i++) 
+		{
+			String[] arrayWords = text1[i].split(" ");
+		}
+		for (int i = 0; i < text2.length; i++) 
+		{
+			String[] arrayWords2 = text2[i].split(" ");
+		}
 	}
 	
 	public void compareTo()
