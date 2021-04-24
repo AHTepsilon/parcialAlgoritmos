@@ -29,7 +29,7 @@ public class Main extends PApplet
 	@Override
 	public void draw() //void Update
 	{		
-		System.out.println(mouseX + ", " + mouseY);
+//		System.out.println(mouseX + ", " + mouseY);
 		background(145, 242, 216);
 		rectMode(CENTER);
 		saveButton();
