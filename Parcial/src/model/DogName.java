@@ -4,7 +4,7 @@ public class DogName extends Dogs
 {
 	String name;
 
-	public DogName(String name) 
+	public DogName(String name)
 	{
 		this.name = name;
 	}

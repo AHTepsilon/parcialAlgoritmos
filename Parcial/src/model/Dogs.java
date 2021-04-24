@@ -16,11 +16,7 @@ public class Dogs
 
 	public Dogs() 
 	{
-		id1 = 0;
-		id2 = 0;
-		id3 = 0;
-		id4 = 0;
-		id5 = 0;
+
 	}
 	
 	public void loadText(PApplet app)
@@ -39,13 +35,35 @@ public class Dogs
 		{
 			arrayWords1 = text2[i].split(" ");
 		}
-		
-		id1 = Integer.parseInt(arrayWords[0]);
-		id2 = Integer.parseInt(arrayWords[2]);
-		id3 = Integer.parseInt(arrayWords[4]);
-		id4 = Integer.parseInt(arrayWords[6]);
-		id5 = Integer.parseInt(arrayWords[8]);
-		
+	}
+	
+	public void validateText(int id)
+	{
+		if(id == 1)
+		{
+			id1 = Integer.parseInt(arrayWords[0]);
+			System.out.println(1);
+		}
+		if(id == 2)
+		{
+			id2 = Integer.parseInt(arrayWords[2]);
+			System.out.println(2);
+		}
+		if(id == 3)
+		{
+			id3 = Integer.parseInt(arrayWords[4]);
+			System.out.println(3);
+		}
+		if(id == 4)
+		{
+			id4 = Integer.parseInt(arrayWords[6]);
+			System.out.println(4);
+		}
+		if(id == 5)
+		{
+			id5 = Integer.parseInt(arrayWords[8]);
+			System.out.println(5);
+		}
 	}
 	
 	public void compareTo()

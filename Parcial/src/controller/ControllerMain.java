@@ -16,7 +16,7 @@ public class ControllerMain
 	
 	public void sortList()
 	{
-		
+		logic.draw(app);
 	}
 	
 	public void saveNewText()

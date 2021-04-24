@@ -1,4 +1,5 @@
 package view;
+import controller.ControllerMain;
 import model.Dogs;
 import processing.core.PApplet;
 
@@ -17,16 +18,15 @@ public class Main extends PApplet
 	}
 	
 	int posXButton, posYButton;
-	
-	Dogs dog;
+	ControllerMain controls;
 	
 	@Override
 	public void setup() //void Start
-	{
-		dog = new Dogs();
-		
+	{		
 		posXButton = 410;
 		posYButton = 435;
+		
+		controls = new ControllerMain(this);
 	}
 	
 	@Override
@@ -36,9 +36,9 @@ public class Main extends PApplet
 		background(145, 242, 216);
 		rectMode(CENTER);
 		saveButton();
+		
+		controls.sortList();
 
-		dog.loadText(this);
-		dog.separateText();
 	}
 	
 	public void mousePressed()
