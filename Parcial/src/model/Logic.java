@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Logic
 {
@@ -18,6 +19,8 @@ public class Logic
 	int dogOneY, dogTwoY, dogThreeY, dogFourY, dogFiveY;
 	
 	int orderInt;
+	
+	PImage lab, rott, bull, husk, past;
 	
 	LinkedList<Dogs> listDogs;
 	
@@ -42,7 +45,14 @@ public class Logic
 		textNew = new String[5];
 	}
 	
-
+	public void loadImages(PApplet app)
+	{
+		lab = app.loadImage("./imports/lab.png");
+		rott = app.loadImage("./imports/rott.png");
+		bull = app.loadImage("./imports/bulldog.png");
+		husk = app.loadImage("./imports/husky.png");
+		past = app.loadImage("./imports/pastor.png");
+	}
 	
 	public void draw(PApplet app)
 	{
@@ -54,41 +64,46 @@ public class Logic
 		dog.separateText();
 		dog.validateText(1);
 	
-		dogOneText = dog.id1 + ", " + dog.name1.name + ", " + dog.birthday1.birthday + ", " + dog.breed1.breed;
+		dogOneText = dog.id1 + ", " + dog.name1.name.toLowerCase() + ", " + dog.birthday1.birthday + ", " + dog.breed1.breed.toLowerCase();
 	
 		app.text(dogOneText, 84, dogOneY);
+		app.image(lab, 60, dogOneY-7);
 				
 		dog2.loadText(app);
 		dog2.separateText();
 		dog2.validateText(2);
 		
-		dogTwoText = dog2.id2 + ", " + dog2.name2.name + ", " + dog2.birthday2.birthday + ", " + dog2.breed2.breed;
+		dogTwoText = dog2.id2 + ", " + dog2.name2.name.toLowerCase() + ", " + dog2.birthday2.birthday + ", " + dog2.breed2.breed.toLowerCase();
 		
 		app.text(dogTwoText, 84, dogTwoY);
+		app.image(past, 60, dogTwoY-7);
 				
 		dog3.loadText(app);
 		dog3.separateText();
 		dog3.validateText(3);
 		
-		dogThreeText = dog3.id3 + ", " + dog3.name3.name + ", " + dog3.birthday3.birthday + ", " + dog3.breed3.breed;
+		dogThreeText = dog3.id3 + ", " + dog3.name3.name.toLowerCase() + ", " + dog3.birthday3.birthday + ", " + dog3.breed3.breed.toLowerCase();
 		
 		app.text(dogThreeText, 84, dogThreeY);
+		app.image(bull, 60, dogThreeY-7);
 				
 		dog4.loadText(app);
 		dog4.separateText();
 		dog4.validateText(4);
 		
-		dogFourText = dog4.id4 + ", " + dog4.name4.name + ", " + dog4.birthday4.birthday + ", " + dog4.breed4.breed;
+		dogFourText = dog4.id4 + ", " + dog4.name4.name.toLowerCase() + ", " + dog4.birthday4.birthday + ", " + dog4.breed4.breed.toLowerCase();
 		
 		app.text(dogFourText, 84, dogFourY);
+		app.image(rott, 60, dogFourY-7);
 				
 		dog5.loadText(app);
 		dog5.separateText();
 		dog5.validateText(5);
 		
-		dogFiveText = dog5.id5 + ", " + dog5.name5.name + ", " + dog5.birthday5.birthday + ", " + dog5.breed5.breed;
+		dogFiveText = dog5.id5 + ", " + dog5.name5.name.toLowerCase() + ", " + dog5.birthday5.birthday + ", " + dog5.breed5.breed.toLowerCase();
 		
 		app.text(dogFiveText, 84, dogFiveY);
+		app.image(husk, 60, dogFiveY-7);
 			
 	}
 	

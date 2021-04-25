@@ -14,6 +14,11 @@ public class ControllerMain
 		logic = new Logic(app);
 	}
 	
+	public void loadImages()
+	{
+		logic.loadImages(app);
+	}
+	
 	public void draw(PApplet app)
 	{
 		logic.draw(app);
@@ -31,7 +36,6 @@ public class ControllerMain
 			logic.saveNewText();
 			app.exit();
 		}
-
 	}
 
 }
