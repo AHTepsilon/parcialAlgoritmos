@@ -1,6 +1,8 @@
 package model;
 
-public class DogBreed extends Dogs
+import java.util.Comparator;
+
+public class DogBreed extends Dogs implements Comparator
 {
 	String breed;
 
@@ -35,6 +37,12 @@ public class DogBreed extends Dogs
 		{
 			breed = "Husky siberiano";
 		}
+	}
+	
+	@Override
+	public int compare(Object arg0, Object arg1) 
+	{
+		return 0;
 	}
 
 	public String getBreed() {

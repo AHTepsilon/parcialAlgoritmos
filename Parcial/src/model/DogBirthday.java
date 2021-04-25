@@ -1,6 +1,8 @@
 package model;
 
-public class DogBirthday extends Dogs
+import java.util.Comparator;
+
+public class DogBirthday extends Dogs implements Comparator
 {
 	String birthday;
 	
@@ -35,6 +37,12 @@ public class DogBirthday extends Dogs
 		{
 			birthday = "09-02-2017";
 		}
+	}
+	
+	@Override
+	public int compare(Object arg0, Object arg1) 
+	{
+		return 0;
 	}
 
 	public String getBirthday() {

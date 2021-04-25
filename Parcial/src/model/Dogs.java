@@ -2,13 +2,15 @@ package model;
 
 import processing.core.PApplet;
 
-public class Dogs 
+public class Dogs
 {
 	String[] text1;
 	String[] text2;
 	
 	String[] arrayWords;
 	String[] arrayWords1;
+	
+	String[] newText;
 	int posX;
 	int posY;
 	int id1, id2, id3, id4, id5;
@@ -21,7 +23,7 @@ public class Dogs
 
 	public Dogs() 
 	{
-
+		
 	}
 	
 	public void loadText(PApplet app)
@@ -56,7 +58,7 @@ public class Dogs
 			birthday1.assign(1);
 			breed1.assign(1);
 			
-			System.out.println(id1 + ", " + name1.name + ", " + birthday1.birthday + ", " + breed1.breed);
+			//System.out.println(id1 + ", " + name1.name + ", " + birthday1.birthday + ", " + breed1.breed);
 		}
 		if(id == 2)
 		{
@@ -70,7 +72,7 @@ public class Dogs
 			birthday2.assign(2);
 			breed2.assign(2);
 			
-			System.out.println(id2 + ", " + name2.name + ", " + birthday2.birthday + ", " + breed2.breed);
+			//System.out.println(id2 + ", " + name2.name + ", " + birthday2.birthday + ", " + breed2.breed);
 		}
 		if(id == 3)
 		{
@@ -84,7 +86,7 @@ public class Dogs
 			birthday3.assign(3);
 			breed3.assign(3);
 			
-			System.out.println(id3 + ", " + name3.name + ", " + birthday3.birthday + ", " + breed3.breed);
+			//System.out.println(id3 + ", " + name3.name + ", " + birthday3.birthday + ", " + breed3.breed);
 		}
 		if(id == 4)
 		{
@@ -98,7 +100,7 @@ public class Dogs
 			birthday4.assign(4);
 			breed4.assign(4);
 			
-			System.out.println(id4 + ", " + name4.name + ", " + birthday4.birthday + ", " + breed4.breed);
+			//System.out.println(id4 + ", " + name4.name + ", " + birthday4.birthday + ", " + breed4.breed);
 		}
 		if(id == 5)
 		{
@@ -112,13 +114,8 @@ public class Dogs
 			birthday5.assign(5);
 			breed5.assign(5);
 			
-			System.out.println(id5 + ", " + name5.name + ", " + birthday5.birthday + ", " + breed5.breed);
+			//System.out.println(id5 + ", " + name5.name + ", " + birthday5.birthday + ", " + breed5.breed);
 		}
-	}
-	
-	public void compareTo()
-	{
-		
 	}
 
 	public String[] getText1() {
@@ -200,7 +197,13 @@ public class Dogs
 	public void setId5(int id5) {
 		this.id5 = id5;
 	}
-	
-	
+
+	public String[] getNewText() {
+		return newText;
+	}
+
+	public void setNewText(String[] newText) {
+		this.newText = newText;
+	}
 
 }

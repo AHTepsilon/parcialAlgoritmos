@@ -27,18 +27,17 @@ public class Main extends PApplet
 		posYButton = 435;
 		
 		controls = new ControllerMain(this);
+
 	}
 	
 	@Override
 	public void draw() //void Update
 	{		
-//		System.out.println(mouseX + ", " + mouseY);
+		//System.out.println(mouseX + ", " + mouseY);
 		background(145, 242, 216);
 		rectMode(CENTER);
-		saveButton();
-		
+		buttons();
 		controls.sortList();
-
 	}
 	
 	public void mousePressed()
@@ -46,7 +45,7 @@ public class Main extends PApplet
 		
 	}
 	
-	public void saveButton()
+	public void buttons()
 	{
 		stroke(0);
 		strokeWeight(3);
@@ -57,6 +56,11 @@ public class Main extends PApplet
 		fill(0);
 		textSize(20);
 		text("SAVE", 410, 443);
+		
+		stroke(0);
+		strokeWeight(3);
+		fill(255);
+		rect(posXButton - 100, posYButton, 80, 30);
 	}
 
 }
