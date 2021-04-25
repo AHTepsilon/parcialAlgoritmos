@@ -45,6 +45,8 @@ public class Main extends PApplet
 		controls.sortList();
 		
 		System.out.println("test");
+		
+		controls.saveNewText();
 	}
 	
 	public void buttons()

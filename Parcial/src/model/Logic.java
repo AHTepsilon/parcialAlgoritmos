@@ -38,16 +38,11 @@ public class Logic
 		dogThreeY = 127;
 		dogFourY = 167;
 		dogFiveY = 207;
+		
+		textNew = new String[5];
 	}
 	
-	public void saveNewText()
-	{
-		switch(orderInt)
-		{
-		case 0:
-			
-		}
-	}
+
 	
 	public void draw(PApplet app)
 	{
@@ -58,27 +53,42 @@ public class Logic
 		dog.loadText(app);
 		dog.separateText();
 		dog.validateText(1);
-		app.text(dog.id1 + ", " + dog.name1.name + ", " + dog.birthday1.birthday + ", " + dog.breed1.breed, 84, dogOneY);
+	
+		dogOneText = dog.id1 + ", " + dog.name1.name + ", " + dog.birthday1.birthday + ", " + dog.breed1.breed;
+	
+		app.text(dogOneText, 84, dogOneY);
 				
 		dog2.loadText(app);
 		dog2.separateText();
 		dog2.validateText(2);
-		app.text(dog2.id2 + ", " + dog2.name2.name + ", " + dog2.birthday2.birthday + ", " + dog2.breed2.breed, 84, dogTwoY);
+		
+		dogTwoText = dog2.id2 + ", " + dog2.name2.name + ", " + dog2.birthday2.birthday + ", " + dog2.breed2.breed;
+		
+		app.text(dogTwoText, 84, dogTwoY);
 				
 		dog3.loadText(app);
 		dog3.separateText();
 		dog3.validateText(3);
-		app.text(dog3.id3 + ", " + dog3.name3.name + ", " + dog3.birthday3.birthday + ", " + dog3.breed3.breed, 84, dogThreeY);
+		
+		dogThreeText = dog3.id3 + ", " + dog3.name3.name + ", " + dog3.birthday3.birthday + ", " + dog3.breed3.breed;
+		
+		app.text(dogThreeText, 84, dogThreeY);
 				
 		dog4.loadText(app);
 		dog4.separateText();
 		dog4.validateText(4);
-		app.text(dog4.id4 + ", " + dog4.name4.name + ", " + dog4.birthday4.birthday + ", " + dog4.breed4.breed, 84, dogFourY);
+		
+		dogFourText = dog4.id4 + ", " + dog4.name4.name + ", " + dog4.birthday4.birthday + ", " + dog4.breed4.breed;
+		
+		app.text(dogFourText, 84, dogFourY);
 				
 		dog5.loadText(app);
 		dog5.separateText();
 		dog5.validateText(5);
-		app.text(dog5.id5 + ", " + dog5.name5.name + ", " + dog5.birthday5.birthday + ", " + dog5.breed5.breed, 84, dogFiveY);
+		
+		dogFiveText = dog5.id5 + ", " + dog5.name5.name + ", " + dog5.birthday5.birthday + ", " + dog5.breed5.breed;
+		
+		app.text(dogFiveText, 84, dogFiveY);
 			
 	}
 	
@@ -185,6 +195,45 @@ public class Logic
 //				app.saveStrings("savedDogs.txt", textNew);
 //			}
 //		}
+	}
+	
+	public void saveNewText()
+	{
+		switch(orderInt)
+		{
+		case 0:
+			textNew[0] = dogOneText;
+			textNew[1] = dogTwoText;
+			textNew[2] = dogThreeText;
+			textNew[3] = dogFourText;
+			textNew[4] = dogFiveText;
+			break;
+		case 1:
+			textNew[0] = dogThreeText;
+			textNew[1] = dogTwoText;
+			textNew[2] = dogFourText;
+			textNew[3] = dogOneText;
+			textNew[4] = dogFiveText;
+			break;
+		case 2:
+			textNew[0] = dogTwoText;
+			textNew[1] = dogFiveText;
+			textNew[2] = dogThreeText;
+			textNew[3] = dogOneText;
+			textNew[4] = dogFourText;
+			break;
+		case 3:
+			textNew[0] = dogThreeText;
+			textNew[1] = dogFiveText;
+			textNew[2] = dogOneText;
+			textNew[3] = dogTwoText;
+			textNew[4] = dogFourText;
+			break;
+		default:
+			break;
+		}
+		
+		app.saveStrings("./data/exports/savedDogs.txt", textNew);
 	}
 
 }

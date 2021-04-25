@@ -26,7 +26,12 @@ public class ControllerMain
 	
 	public void saveNewText()
 	{
-		logic.saveNewText();
+		if(app.mouseX > 408 && app.mouseX < 491 && app.mouseY > 419 && app.mouseY < 450)
+		{
+			logic.saveNewText();
+			app.exit();
+		}
+
 	}
 
 }
