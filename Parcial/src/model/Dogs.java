@@ -2,7 +2,7 @@ package model;
 
 import processing.core.PApplet;
 
-public class Dogs
+public class Dogs implements Comparable<Dogs>
 {
 	String[] text1;
 	String[] text2;
@@ -11,8 +11,10 @@ public class Dogs
 	String[] arrayWords1;
 	
 	String[] newText;
+	
 	int posX;
 	int posY;
+	int id;
 	int id1, id2, id3, id4, id5;
 	PApplet app;
 	
@@ -46,6 +48,8 @@ public class Dogs
 	
 	public void validateText(int id)
 	{
+		this.id = id;
+		
 		if(id == 1)
 		{
 			id1 = Integer.parseInt(arrayWords[0]);
@@ -116,6 +120,12 @@ public class Dogs
 			
 			//System.out.println(id5 + ", " + name5.name + ", " + birthday5.birthday + ", " + breed5.breed);
 		}
+	}
+	
+	@Override
+	public int compareTo(Dogs nextDogs) 
+	{
+		return this.id - nextDogs.id;
 	}
 
 	public String[] getText1() {
@@ -205,5 +215,6 @@ public class Dogs
 	public void setNewText(String[] newText) {
 		this.newText = newText;
 	}
+
 
 }

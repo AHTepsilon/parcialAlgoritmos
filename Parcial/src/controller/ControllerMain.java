@@ -14,9 +14,14 @@ public class ControllerMain
 		logic = new Logic(app);
 	}
 	
-	public void sortList()
+	public void draw(PApplet app)
 	{
 		logic.draw(app);
+	}
+	
+	public void sortList()
+	{
+		logic.sortList();
 	}
 	
 	public void saveNewText()
